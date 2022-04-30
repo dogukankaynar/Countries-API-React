@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { BrowserRouter as Routes} from "react-router-dom";
 function CountryList() {
 const [countries,SetCountries]=useState([])
   // useEffect(() =>{
@@ -17,13 +16,13 @@ const [countries,SetCountries]=useState([])
       .catch((error) => console.log(error));
   }, []);
   console.log(countries);
-// const getCountryList
+
   return (
-      <div className="App">
+      <div className="country-list">
         <h1 className="App-header ">Contries List</h1>
         {
-          countries.map((count, i) => (
-              <div className="count" key={i}>
+          countries.map((count) => (
+              <div className="count" key={count.alpha3Code}>
                 {count.name}
                 <img src={count.flag} />
               </div>
