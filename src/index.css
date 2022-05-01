@@ -19,31 +19,27 @@ code {
   gap:1em;
 }
 img{width: 40px}
+.country-list{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:5em;
+}
 .count{
   border:2px solid ;
   width: 20em;
   border-radius: 5px;
   display: flex;
   justify-content:space-between;
-}
-.country-list{
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-}
-.country-menu{
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  margin-top:6em;
-  border:2px solid ;
-  width: 30em;
-  height: 30em;
-  border-radius: 5px;
+  list-style: none;
+  margin:3px;
+  font-weight: bold;
+  padding:1px;
 }
 .country-flag{
   width:70%;
 }
+
 span{
   font-size:2em;
   font-weight:bold;

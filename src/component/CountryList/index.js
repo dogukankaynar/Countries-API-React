@@ -16,20 +16,18 @@ const [countries,SetCountries]=useState([])
       .catch((error) => console.log(error));
   }, []);
   console.log(countries);
-
   return (
       <div className="country-list">
         <h1 className="App-header ">Contries List</h1>
         {
-          countries.map((count) => (
-              <div className="count" key={count.alpha3Code}>
-                {count.name}
-                <img src={count.flag} />
-              </div>
-            ))
-          }
+          countries.map((count)=>(
+            <div className='count' key={count.alpha3Code}>{count.name} <img src={count.flag} /></div>          
+          ))
+        }
         
       </div>
   );
 }
+
+
 export default CountryList
